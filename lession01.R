@@ -15,6 +15,7 @@ species <- iris[  ,5] #เอาค่า species มาเก็บไว้ต
 head(species)
 ###### market research 1500 คนเพื่อมาทำ Segment ค่าทำ 3 ล้านบาท
 ## K-Means Clustering ##
+set.seed(5) # ไม่ให้ result เปลี่ยนเพราะการทำงานมันจะ random
 km_result <- kmeans(features, centers = 3) #unsupervised learning งานที่คาดเดาไม่ได้ ไม่มีคำตอบคือไม่รู้ว่ามีกี่ segment
 #centers คือค่า K จำนวน segment ที่เราคาดว่าจะมี ทีนี้ iris ถูกกำหนดมาแล้วว่ามี data อยู่ 3 สายพันธุ์
 names(km_result) #แสดง props ของ object นั้น
