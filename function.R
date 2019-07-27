@@ -29,3 +29,26 @@ func_ret_swap_gender <- function(gender){
 }
 func_ret_swap_gender("M")
 func_ret_swap_gender("F")
+
+func_ret_fullname <- function(first_name,surname){
+  fullname <- paste(c(first_name,surname),collapse = " ")
+  return(fullname)
+}
+
+func_ret_fullname(surname = "Lerdprasert", first_name = "Khomkrid")
+
+sample(1:100,size = 5)
+
+roll_dices <- function(){
+  dices_one <- sample(1:6, size = 1)
+  dices_two <- sample(1:6, size = 1)
+  return(dices_one+dices_two)
+}
+roll_dices()
+
+roll_dices2 <- function(){
+  result <- sample(1:6, size = 2, replace = T)
+  sum(result)
+}
+
+roll_dices2()
