@@ -15,3 +15,15 @@ hist(mtcars$mpg, breaks = 10) #นำค่าที่ได้มา plot grap
 cor(mtcars$wt,mtcars$mpg) #หาความสัมพันธ์ระหว่าง 2 ตัวแปรที่เป็นตัวเลขทั้งคู่
 plot(mtcars$wt,mtcars$mpg) #ตัวแปรต้นใช้แกน x ตัวแปรตามที่ต้องทำนายใช้ Y
 lm_model <- lm(mpg ~ wt , data = mtcars) #linear model ทำ linear regration ทำนายผล
+lm_model
+plot(mtcars$wt,mtcars$mpg,pch = 16)
+abline(lm_model) #ใส่เส้นค่า slope เข้าไป plot 
+new_car <- data.frame(wt = 0.2725) #สร้างรถของเรามาทำนาย
+new_car
+predict(lm_model,newdata = new_car)
+lm_model <- lm (mpg ~ wt + hp + am , data = mtcars)
+lm_model
+
+new_car <- data.frame(wt = 0.27,hp = 1200,am = 0) #harley กินน้ำมัน 
+new_car
+predict(lm_model,newdata = new_car)
