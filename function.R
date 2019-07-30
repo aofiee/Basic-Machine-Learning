@@ -46,9 +46,9 @@ roll_dices <- function(){
 }
 roll_dices()
 
-roll_dices2 <- function(){
-  result <- sample(1:6, size = 2, replace = T)
+roll_dices2 <- function(n){
+  result <- sample(1:6, size = n, replace = T)
   sum(result)
 }
 
-roll_dices2()
+roll_dices2(10)
